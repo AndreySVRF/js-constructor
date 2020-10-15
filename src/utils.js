@@ -12,15 +12,15 @@ export function css(styles = {}) {
   return Object.keys(styles).map(toString).join(';')
 }
 
-export function block(type) {
+export function block(type, title) {
   return `
     <form name="${type}">
-      <h5>${type}</h5>
+      <h5>${title}</h5>
       <div class="form-group">
-        <input class="form-control form-control-sm" name="value" placeholder="value"> 
+        <input class="form-control form-control-sm" name="value" placeholder="Введите текст" required> 
       </div>
       <div class="form-group">
-        <input class="form-control form-control-sm" name="styles" placeholder="styles"> 
+        <input class="form-control form-control-sm" name="styles" placeholder="Стили"> 
       </div>
       <button type="submit" class="btn btn-primary btn-sm">Добавить</button>
     </form>
